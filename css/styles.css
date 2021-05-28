@@ -294,27 +294,27 @@ tr.grid-container.double-bar-chart td:nth-child(2n) {
 	grid-area: column-1;
 	text-align: right;
 	font-weight: 300;
-	background: linear-gradient(to left, #eee var(--scale-output), #fff var(--scale-output));
+	background: linear-gradient(to left, rgb(235,235,235) var(--scale-output), rgba(255,255,255,0) var(--scale-output));
 }
 
 tr.grid-container.double-bar-chart td:nth-child(3n) {
 	grid-area: column-3;
 	text-align: left;
 	font-weight: 300;
-	background: linear-gradient(to right, #eee var(--scale-output), #fff var(--scale-output));
+	background: linear-gradient(to right, rgb(235,235,235) var(--scale-output), rgba(255,255,255,0) var(--scale-output));
 }
 		/* Optionally highlight data in gold */
 
 tr.grid-container.double-bar-chart.gold td:nth-child(2n) {
 	grid-area: column-1;
 	text-align: right;
-	background: linear-gradient(to left, #fb0 var(--scale-output), #fff var(--scale-output));
+	background: linear-gradient(to left, rgb(255,187,0) var(--scale-output), rgba(255,255,255,0) var(--scale-output));
 }
 
 tr.grid-container.double-bar-chart.gold td:nth-child(3n) {
 	grid-area: column-3;
 	text-align: left;
-	background: linear-gradient(to right, #fb0 var(--scale-output), #fff var(--scale-output));
+	background: linear-gradient(to right, rgb(255,187,0) var(--scale-output), rgba(255,255,255,0) var(--scale-output));
 }
 
 /* UTILITIES */
