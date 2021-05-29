@@ -402,9 +402,9 @@ table.large td {
 }
 
 @media screen and (max-width: 500px) {
-	tr {
+/*	tr {
 		font-size: .8rem !important;
-	}
+	} */
 
 	.single-bar-chart {
 		column-gap: 10px;
