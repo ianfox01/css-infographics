@@ -73,6 +73,11 @@
 	.grid-container.fifths {
 		grid-template-columns: 1fr;
 	}
+
+	.grid-container.double-bar-chart {
+		grid-template-columns: minmax(0, 2fr) minmax(0, 1.25fr) minmax(0, 2fr);
+		column-gap: 5px;
+	}
 }
 
 /* INFOGRAPHIC STYLES */
@@ -210,7 +215,7 @@ table {
 }
 
 tr.grid-container td {
-	padding: 10px;
+	padding: 15px 10px;
 }
 
 	/* Variables to Calculate Graph Lengths*/
@@ -368,8 +373,12 @@ tr.grid-container.double-bar-chart.gold td:nth-child(3n) {
 }
   /* Size */
 
+table.dense td {
+	padding: 10px;
+}
+
 table.large td {
-	padding: 30px;
+	padding: 30px 10px;
 }
 
 /* RESPONSIVE ICONS AND FONTS */
@@ -404,7 +413,7 @@ table.large td {
 @media screen and (max-width: 500px) {
 /*	tr {
 		font-size: .8rem !important;
-	} */
+	}*/
 
 	.single-bar-chart {
 		column-gap: 10px;
