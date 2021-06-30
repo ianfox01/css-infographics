@@ -18,7 +18,7 @@
 <div class="body-container">
 	<h1>Infographic Test</h1>
 	<!-- PIE CHARTS -->
-	<h2>Pie Charts</h2>
+	<h2>Simple Pie Charts</h2>
 	<div class="grid-container thirds">
 		<div class="infographic">
 			<p class="infographic-item-heading">Some Things</p>
@@ -51,35 +51,22 @@
 			<p>of the graphs on this page consist of <strong>totally fake data.</strong></p>
 		</div>
 	</div>
-	<!-- PROGRESS CHART -->
-	<h2>Simple Progress List</h2>
-	<div class="grid-container single simple-progress-list">
-		<div class="progress-list-item">
-			<p><strong>Goal 1</strong>
-				<br />
-				A very important milestone.
-			</p>
-			<div class="progress-icon-wrap">
-				<i class="icon fas fa-check"></i>
-				<p>Complete</p>
+	<!-- COMPLEX PIE CHART -->
+	<h2>Complex Pie Charts</h2>
+	<div class="grid-container thirds">
+		<div class="infographic">
+			<p class="infographic-item-heading">Where Recent TU Grads Are Employed</p>
+			<div class="infographic-item pie donut" style="--segment1: 85;--segment2: 93;">
 			</div>
 		</div>
-		<div class="progress-list-item">
-			<p><strong>Goal 2</strong>
-				<br />
-				Achieving amazing things.</p>
-			<div class="progress-icon-wrap">
-				<i class="icon fas fa-check"></i>
-				<p>Complete</p>
-			</div>
-		</div>
-		<div class="progress-list-item">
-			<p><strong>Goal 3</strong>
-				<br />
-				This goal is the goaliest one of all.</p>
-			<div class="progress-icon-wrap">
-				<i class="icon fas fa-redo-alt"></i>
-				<p>In Progress</p>
+		<div class="pie-key-container">
+			<div class="grid-container pie-key">
+				<p class="key-color-gold">85%</p>
+				<p>Maryland</p>
+				<p class="key-color-light">6%</p>
+				<p>Washington, D.C.</p>
+				<p class="key-color-dark">9%</p>
+				<p>Outside of the region</p>
 			</div>
 		</div>
 	</div>
@@ -138,8 +125,37 @@
 			<p class="data-value">16,000</p>
 		</div>
 	</div>
+	<!--  Mini-Grid -->
+	<h2>Mini Grid</h2>
+	<div class="grid-container fifths">
+		<div class="infographic card">
+			<p class="infographic-item-heading">Some Important Facts & Figures</p>
+			<div class="infographic-item">
+				<span aria-hidden="true" class="infographic-icon fas fa-shield-alt"></span>
+				<p class="data-value">122</p>
+			</div>
+		</div>
+		<div class="grid-container half mini responsive-fit">
+			<div class="data-block">
+				<p class="infographic-item-heading">This is a small number</p>
+				<p class="data-value">7%</p>
+			</div>
+			<div class="data-block">
+				<p class="infographic-item-heading">Two-thirds is also known as</p>
+				<p class="data-value">66%</p>
+			</div>
+			<div class="data-block">
+				<p class="infographic-item-heading">We're in the top</p>
+				<p class="data-value">100</p>
+			</div>
+			<div class="data-block">
+				<p class="infographic-item-heading">Is twice as much as 7</p>
+				<p class="data-value">14</p>
+			</div>
+		</div>
+	</div>	
 	<!--  Mix and Match -->
-	<h2>Mix and Match with Utilities</h2>
+	<h2>Grid with Mixin Utilities</h2>
 	<div class="grid-container thirds">
 		<div class="infographic reverse dark card">
 			<p class="infographic-item-heading">Other Things</p>
@@ -172,7 +188,26 @@
 		</div>
 	</div>
 	<!-- Bar Charts -->
-	<h2>Bar Chart</h2>
+	<h2>Simple Bar Chart</h2>
+	<table class="grid-container single-bar-chart fancy">
+		<thead>
+			<tr>
+				<th class="sr-only">Institution</th>
+				<th class="sr-only">Headcount</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>UMBC</td>
+				<td style="--this-value:41; --scale: 100;">41%</td>
+			</tr>
+			<tr class="gold">
+				<td>TU</td>
+				<td style="--this-value:61; --scale: 100;">61%</td>
+			</tr>
+		</tbody>
+	</table>
+	<h2>Complex Bar Chart (Univariate)</h2>
 	<table class="grid-container single-bar-chart">
 		<thead>
 			<tr>
@@ -199,7 +234,7 @@
 			</tr>
 		</tbody>
 	</table>
-	<h2>Double Bar Chart</h2>
+	<h2>Complex Bar Chart (Bivariate)</h2>
 	<table class="grid-container double-bar-chart">
 		<thead>
 			<tr>
@@ -231,76 +266,94 @@
 			</tr>
 		</tbody>
 	</table>
-
+	<!-- PROGRESS LIST -->
+	<h2>Simple Progress List</h2>
+	<div class="grid-container single simple-progress-list">
+		<div class="progress-list-item">
+			<p><strong>Goal 1</strong>
+				<br />
+				A very important milestone.
+			</p>
+			<div class="progress-icon-wrap">
+				<i class="icon fas fa-check"></i>
+				<p>Complete</p>
+			</div>
+		</div>
+		<div class="progress-list-item">
+			<p><strong>Goal 2</strong>
+				<br />
+				Achieving amazing things.</p>
+			<div class="progress-icon-wrap">
+				<i class="icon fas fa-check"></i>
+				<p>Complete</p>
+			</div>
+		</div>
+		<div class="progress-list-item">
+			<p><strong>Goal 3</strong>
+				<br />
+				This goal is the goaliest one of all.</p>
+			<div class="progress-icon-wrap">
+				<i class="icon fas fa-redo-alt"></i>
+				<p>In Progress</p>
+			</div>
+		</div>
+	</div>
+	<!-- TIMELINE -->
 	<h2>Timeline</h2>
-
-<div class="timeline-wrapper">
-<div class="timeline">
-  <div class="container ">
-    <div class="date">15 Dec</div>
-    <i class="icon fa fa-rocket"></i>
-    <div class="content">
-      <h2>Lorem ipsum dolor sit amet</h2>
-      <p>
-        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-      </p>
-    </div>
-  </div>
-  <div class="container">
-    <div class="date">22 Oct</div>
-    <i class="icon fa fa-gift"></i>
-    <div class="content">
-      <h2>Lorem ipsum dolor sit amet</h2>
-      <p>
-        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-      </p>
-    </div>
-  </div>
-  <div class="container dark">
-    <div class="date">10 Jul</div>
-    <i class="icon fa fa-user"></i>
-    <div class="content">
-      <h2>Lorem ipsum dolor sit amet</h2>
-      <p>
-        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-      </p>
-    </div>
-  </div>
-  <div class="container">
-    <div class="date">18 May</div>
-    <i class="icon fa fa-running"></i>
-    <div class="content">
-      <h2>Lorem ipsum dolor sit amet</h2>
-      <p>
-        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-      </p>
-    </div>
-  </div>
-  <div class="container">
-    <div class="date">10 Feb</div>
-    <i class="icon fa fa-cog"></i>
-    <div class="content">
-      <h2>Lorem ipsum dolor sit amet</h2>
-      <p>
-        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-      </p>
-    </div>
-  </div>
-  <div class="container">
-    <div class="date">01 Jan</div>
-    <i class="icon fa fa-certificate"></i>
-    <div class="content">
-      <h2>Lorem ipsum dolor sit amet</h2>
-      <p>
-        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-      </p>
-    </div>
-  </div>
-</div>
-</div>
-
-
-
+	<div class="timeline-wrapper">
+		<div class="timeline">
+			<div class="container ">
+				<div class="date">Fall 2019</div>
+				<i class="icon fas fa-search"></i>
+				<div class="content">
+					<h2>Phase 1: Discovery</h2>
+					<p>
+						Develop fact base on where we are; gather initial input on aspirations from senior leadership; conduct an environmental scan and SWOT analysis.
+					</p>
+				</div>
+			</div>
+			<div class="container">
+				<div class="date">Spring – Fall 2020</div>
+				<i class="icon fas fa-users"></i>
+				<div class="content">
+					<h2>Phase 2: Input Sessions & Development</h2>
+					<p>
+						Conduct listening and input sessions with internal stakeholders; develop and share draft plan for feedback through shared governance.
+					</p>
+				</div>
+			</div>
+			<div class="container">
+				<div class="date">Summer 2020 – Spring 2021</div>
+				<i class="icon fas fa-clipboard-check"></i>
+				<div class="content">
+					<h2>Phase 3: Test & Finalize</h2>
+					<p>
+						Develop final strategy in detail; recommend next steps for implementation.
+					</p>
+				</div>
+			</div>
+			<div class="container">
+				<div class="date">Spring 2021</div>
+				<i class="icon fas fa-rocket"></i>
+				<div class="content">
+					<h2>Phase 4: Implement & Launch</h2>
+					<p>
+						Share the final plan internally and externally; put the plan to action.
+					</p>
+				</div>
+			</div>
+			<div class="container">
+				<div class="date">Spring – Summer 2021</div>
+				<i class="icon fas fa-cogs"></i>
+				<div class="content">
+					<h2>Phase 5: Alignment</h2>
+					<p>
+						Colleges, divisions, and units revise or develop strategic plans in alignment with TU Strategic Plan.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 </body>
 
