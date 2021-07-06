@@ -25,5 +25,7 @@ Class|Fuction|Applies to
 --|--|--
 `.card`|Wraps a parent or child in a bordered container with a drop shadow.|Grid containers, data blocks
 `.dark`|Changes an infographic to gold-on-black.|Pie charts, data blocks
-`.reverse`|Reverses order of elements from top-to-bottom to bottom-to-top.|
+`.gold`|Changes an infographic to black-on-gold.|Pie charts, data blocks
+`.stripe`|Adds striped background to component.|Data blocks where `.gold` or `.dark` are applied.
+`.reverse`|Reverses order of elements from top-to-bottom to bottom-to-top.|Data blocks
 `.responsive-fit`|Overrides a grid container's layout to stack children in a single column at the 720 breakpoint instead of 500.|Grid containers
