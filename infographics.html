@@ -158,11 +158,11 @@
 	<h2>Grid with Mix-In Utilities</h2>
 	<div class="grid-container thirds">
 		<div class="infographic reverse dark card">
-			<p class="infographic-item-heading">Other Things</p>
 			<div class="infographic-item">
 				<span aria-hidden="true" class="infographic-icon fas fa-bolt"></span>
 				<p class="data-value">122</p>
-			</div>
+			</div>			
+			<p class="infographic-item-heading">Other Things</p>
 		</div>
 		<div class="data-block">
 			<p class="infographic-item-heading">This is a small number</p>
@@ -178,9 +178,9 @@
 			<p class="data-value">100</p>
 			<p class="infographic-item-subheading">This is some additional text to tell ya' about it.</p>
 		</div>
-		<div class="data-block dark reverse">
-			<p class="infographic-item-heading">Is twice as much as 7</p>
+		<div class="data-block reverse dark">
 			<p class="data-value">14</p>
+			<p class="infographic-item-heading">Is twice as much as 7</p>
 		</div>
 		<div class="data-block">
 			<p class="infographic-item-heading">This is a big number</p>
@@ -193,8 +193,8 @@
 		<caption><h2>Simple Bar Chart</h2></caption>	
 			<thead>
 				<tr>
-					<th class="sr-only">Institution</th>
-					<th class="sr-only">Headcount</th>
+					<th scope="row">Institution</th>
+					<th scope="row">Headcount</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -212,8 +212,8 @@
 		<caption><h2>Complex Bar Chart (Univariate)</h2></caption>	
 			<thead>
 				<tr>
-					<th>Institution</th>
-					<th>Headcount</th>
+					<th scope="row">Institution</th>
+					<th scope="row">Headcount</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -239,9 +239,9 @@
 		<caption><h2>Complex Bar Chart (Bivariate)</h2></caption>	
 			<thead>
 				<tr>
-					<th>Institution</th>
-					<th>Funding Per FTE</th>
-					<th>Headcount</th>
+					<th scope="row">Institution</th>
+					<th scope="row">Funding Per FTE</th>
+					<th scope="row">Headcount</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -303,7 +303,7 @@
 	<h2>Timeline</h2>
 	<div class="timeline-wrapper">
 		<div class="timeline">
-			<div class="container ">
+			<div class="timeline-item">
 				<div class="date">Fall 2019</div>
 				<i aria-hidden="true" class="icon fas fa-search"></i>
 				<div class="content">
@@ -313,7 +313,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="container">
+			<div class="timeline-item">
 				<div class="date">Spring – Fall 2020</div>
 				<i aria-hidden="true" class="icon fas fa-users"></i>
 				<div class="content">
@@ -323,7 +323,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="container">
+			<div class="timeline-item">
 				<div class="date">Summer 2020 – Spring 2021</div>
 				<i aria-hidden="true" class="icon fas fa-clipboard-check"></i>
 				<div class="content">
@@ -333,7 +333,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="container">
+			<div class="timeline-item">
 				<div class="date">Spring 2021</div>
 				<i aria-hidden="true" class="icon fas fa-rocket"></i>
 				<div class="content">
@@ -343,7 +343,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="container">
+			<div class="timeline-item">
 				<div class="date">Spring – Summer 2021</div>
 				<i aria-hidden="true" class="icon fas fa-cogs"></i>
 				<div class="content">
