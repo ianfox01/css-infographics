@@ -140,6 +140,7 @@ table.grid-container.double-bar-chart tbody tr {
 .infographic {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;		
 }
 
 p.data-value {
