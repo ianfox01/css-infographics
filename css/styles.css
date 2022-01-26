@@ -59,6 +59,11 @@
 }
 
 .grid-container.fifths {
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+	grid-auto-rows: minmax(260px, auto);
+}
+
+.grid-container.forty-sixty {
 	grid-template-columns: 2fr 3fr;
 }
 
@@ -111,7 +116,9 @@ table.grid-container.double-bar-chart tbody tr {
 @media screen and (max-width: 720px) {
 
 	.grid-container.thirds,
-	.grid-container.fifths {
+	.grid-container.quarters,
+	.grid-container.fifths,	
+	.grid-container.forty-sixty {
 		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 	}
 
@@ -125,7 +132,8 @@ table.grid-container.double-bar-chart tbody tr {
 
 	.grid-container.half,
 	.grid-container.thirds,
-	.grid-container.fifths {
+	.grid-container.fifths,
+	.grid-container.forty-sixty {
 		grid-template-columns: 1fr;
 	}
 
@@ -140,7 +148,7 @@ table.grid-container.double-bar-chart tbody tr {
 .infographic {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;		
+	justify-content: space-between;	
 }
 
 p.data-value {
@@ -320,7 +328,12 @@ p.key-color-dark {
 	font-size: 12rem;
 }
 
+.infographic-container.smaller .infographic-icon { /* use with 4-up or 5-up  size */
+	font-size: 6rem;	
+}
+
 /* DATA BLOCKS */
+
 .data-block {
 	display: flex;
 	flex-direction: column;
@@ -376,6 +389,7 @@ table,
 .grid-container.single-bar-chart th:nth-child(2n-0) {
 	grid-column-start: 2;
 	text-align: left;
+	padding-left: 0;
 }
 
 /* Data Rows */
@@ -476,11 +490,11 @@ table,
 	background-color: #3C3C3C;
 }
 
-.infographic-item.dark>.infographic-icon {
+.infographic-container.dark .infographic-icon, .infographic-item.dark>.infographic-icon {
 	color: #3C3C3C;
 }
 
-.infographic-item.dark>.data-value {
+.infographic-container.dark .data-value, .infographic-item.dark>.data-value {
 	color: #FB0;
 }
 
@@ -540,7 +554,7 @@ table.double-bar-chart.dense {
 /* Fancy Bar - Single */
 
 table.single-bar-chart.fancy td {
-	padding: 30px 10px !important;
+	padding: 30px 0 30px 10px !important;
 	font-size: 1.25rem;
 }
 
@@ -557,14 +571,16 @@ table.single-bar-chart.fancy td:nth-child(2n-1) {
 	font-weight: 300;
 }
 
-
-
 /* RESPONSIVE ICONS AND FONTS */
 
 @media screen and (max-width: 980px) {
 	.infographic-icon {
 		font-size: 10rem !important;
 	}
+
+	.infographic-container.smaller .infographic-icon {
+		font-size: 5rem !important;
+	}	
 
 	.data-block p.data-value {
 		font-size: 4rem !important;
@@ -733,7 +749,6 @@ table.single-bar-chart.fancy td:nth-child(2n-1) {
 	position: relative;
 	border-radius: 10px;
 	box-shadow: 7px 7px 20px #CCC;
-
 }
 
 .timeline-item:nth-child(2n) .content {
@@ -802,7 +817,6 @@ table.single-bar-chart.fancy td:nth-child(2n-1) {
 		padding-left: 0;
 		width: unset;
 	}
-
 
 	.timeline-item:nth-child(1n) .content {
 		padding: 30px 20px 30px 70px;
