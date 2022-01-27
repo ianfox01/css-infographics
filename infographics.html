@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="HTML5 Template">
 	<meta name="author" content="Template">
-	<script src="https://kit.fontawesome.com/dd49cbd70c.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/152ae4b0b7.js" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 	<script src="conic-gradient.js"></script>
 	<link rel="stylesheet" href="css/styles.css?v=1.0">
@@ -19,7 +19,7 @@
 	<h1>Infographic Test</h1>
 	<!-- PIE CHARTS -->
 	<h2>Simple Pie Charts</h2>
-	<div class="grid-container thirds">
+	<div class="grid-container three">
 		<div class="infographic">
 			<p class="infographic-item-heading">Some Things</p>
 			<div class="infographic-item pie" style="--segment1: 41;">
@@ -53,7 +53,7 @@
 	</div>
 	<!-- COMPLEX PIE CHART -->
 	<h2>Complex Pie Charts</h2>
-	<div class="grid-container thirds">
+	<div class="grid-container three">
 		<div class="infographic">
 			<p class="infographic-item-heading">Where Recent TU Grads Are Employed</p>
 			<div class="infographic-item pie donut" style="--segment1: 85;--segment2: 93;">
@@ -85,7 +85,7 @@
 	</div>
 	<!-- ICON GRID -->
 	<h2>Icon Grid with Labels</h2>
-	<div class="grid-container thirds">
+	<div class="grid-container three">
 		<div class="infographic reverse">
 			<p class="infographic-item-heading">Things</p>
 			<div class="infographic-item">
@@ -108,37 +108,64 @@
 			</div>
 		</div>
 	</div>
-	
-	<h2>Icon Grid with Labels - Showing Icon Only, No Data</h2>  <!--data can be removed by simply omitteding the markup -->
-	<div class="grid-container quarters">
-		<div class="infographic reverse">
+
+	<h2>Icon Grid with Labels - Showing Icon Only, No Data</h2>  <!--data can be removed by simply omitting the markup -->
+	<div class="grid-container infographic-container smaller four">
+		<div class="infographic bottom-label">
 			<div class="infographic-item">
-				<span aria-hidden="true" class="infographic-icon fas fa-lightbulb"></span>
+				<span class="infographic-icon fa-stack" style="vertical-align: top;">
+					<i class="fas fa-ban fa-stack-2x" style="opacity: 50%"></i>
+					<i class="fas fa-dollar-sign fa-stack-1x"></i>
+				</span>
 			</div>
-			<p class="infographic-item-heading">Things</p>
+			<p class="infographic-item-heading">No membership or usage fees</p>
+		</div>
+		<div class="infographic bottom-label">
+			<div class="infographic-item">
+				<span aria-hidden="true" class="infographic-icon fas fa-wifi"></span>
+			</div>
+			<p class="infographic-item-heading">Lightning fast Wi-Fi</p>
 		</div>
 		<div class="infographic bottom-label reverse">
 			<div class="infographic-item">
-				<span aria-hidden="true" class="infographic-icon fas fa-comments"></span>
+				<span aria-hidden="true" class="infographic-icon fas fa-lock-alt"></span>
 			</div>
-			<p class="infographic-item-heading">Other Things</p>
-		</div>
-		<div class="infographic bottom-label reverse">
-			<div class="infographic-item">
-				<span aria-hidden="true" class="infographic-icon fas fa-shield-alt"></span>
-			</div>
-			<p class="infographic-item-heading">More Things</p>
+			<p class="infographic-item-heading">Lockers</p>
 		</div>
 			<div class="infographic bottom-label reverse">
 			<div class="infographic-item">
-				<span aria-hidden="true" class="infographic-icon fas fa-shield-alt"></span>
+				<span aria-hidden="true" class="infographic-icon fad fa-comments"></span>
 			</div>
-			<p class="infographic-item-heading">More Things</p>
-		</div>	
+			<p class="infographic-item-heading">Conference Rooms</p>
+		</div>
+				<div class="infographic bottom-label">
+			<div class="infographic-item">
+				<span aria-hidden="true" class="infographic-icon fas fa-laptop"></span>
+			</div>
+			<p class="infographic-item-heading">Workstations</p>
+		</div>
+		<div class="infographic bottom-label">
+			<div class="infographic-item">
+				<span aria-hidden="true" class="infographic-icon fad fa-coffee-togo"></span>
+			</div>
+			<p class="infographic-item-heading">Starbucks onsite</p>
+		</div>
+		<div class="infographic bottom-label reverse">
+			<div class="infographic-item">
+				<span aria-hidden="true" class="infographic-icon fas fa-road"></span>
+			</div>
+			<p class="infographic-item-heading">Easy access to 695 & 83</p>
+		</div>
+			<div class="infographic bottom-label reverse">
+			<div class="infographic-item">
+				<span aria-hidden="true" class="infographic-icon fas fa-walking"></span>
+			</div>
+			<p class="infographic-item-heading">Walk to restaurants and retail</p>
+		</div>		
 	</div>
 	<!-- DATA BLOCKS -->
 	<h2>Data Grid with Labels</h2>
-	<div class="grid-container thirds">
+	<div class="grid-container three">
 		<div class="data-block">
 			<div class="copy-chunk">
 				<p>Over 200 undergraduate students <strong>participated in research projects.</strong></p>
@@ -163,7 +190,7 @@
 				<p class="data-value">122</p>
 			</div>
 		</div>
-		<div class="grid-container half mini">
+		<div class="grid-container two mini">
 			<div class="data-block">
 				<p class="infographic-item-heading">This is a small number</p>
 				<p class="data-value">7%</p>
@@ -184,7 +211,7 @@
 	</div>	
 	<!--  Mix and Match -->
 	<h2>Grid with Mix-In Utilities</h2>
-	<div class="grid-container thirds">
+	<div class="grid-container three">
 		<div class="infographic reverse dark card">
 			<div class="infographic-item">
 				<span aria-hidden="true" class="infographic-icon fas fa-bolt"></span>
