@@ -43,24 +43,24 @@
 	grid-template-columns: 1fr;
 }
 
-.grid-container.half {
+.grid-container.two {
 	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 	/*	grid-auto-rows: minmax(260px, auto);  */
 }
 
-.grid-container.thirds {
+.grid-container.three {
 	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-	grid-auto-rows: minmax(260px, auto);
+	/*	grid-auto-rows: minmax(260px, auto);  */
 }
 
-.grid-container.quarters {
+.grid-container.four {
 	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-	grid-auto-rows: minmax(260px, auto);
+	/*	grid-auto-rows: minmax(260px, auto);  */
 }
 
-.grid-container.fifths {
+.grid-container.five {
 	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-	grid-auto-rows: minmax(260px, auto);
+	/*	grid-auto-rows: minmax(260px, auto);  */
 }
 
 .grid-container.forty-sixty {
@@ -68,7 +68,7 @@
 }
 
 .grid-container>.grid-container {
-	/*  Eliminated unwanted margin when a grid container is used within a grid container a a sub-grid. */
+	/*  Eliminates unwanted margin when a grid container is used within a grid container as a sub-grid. */
 	margin: 0;
 }
 
@@ -111,13 +111,21 @@ table.grid-container.double-bar-chart tbody tr {
 	display: contents;
 }
 
-/* Media Queries for Small Screens */
+/* Grid Media Queries for Small Screens */
+
+@media screen and (max-width: 980px) {
+
+	.grid-container.four,
+	.grid-container.five {
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+	}
+}
 
 @media screen and (max-width: 720px) {
 
-	.grid-container.thirds,
-	.grid-container.quarters,
-	.grid-container.fifths,	
+	.grid-container.three,
+	.grid-container.four,
+	.grid-container.five,	
 	.grid-container.forty-sixty {
 		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 	}
@@ -130,9 +138,8 @@ table.grid-container.double-bar-chart tbody tr {
 
 @media screen and (max-width: 500px) {
 
-	.grid-container.half,
-	.grid-container.thirds,
-	.grid-container.fifths,
+	.grid-container.two,
+	.grid-container.three,
 	.grid-container.forty-sixty {
 		grid-template-columns: 1fr;
 	}
@@ -323,13 +330,34 @@ p.key-color-dark {
 
 /* ICONS */
 
+.infographic-container {
+	align-items: baseline;
+}
+
 .infographic-icon {
 	color: #fb0;
 	font-size: 12rem;
 }
 
 .infographic-container.smaller .infographic-icon { /* use with 4-up or 5-up  size */
-	font-size: 6rem;	
+	font-size: 5rem;	
+}
+
+/* Font Awesome Stacked Icon Overrides -- modified the default placement of FA icon stacks so they work in our layout*/
+
+.fa-stack {
+	height: 1em;
+	line-height: 1em;
+}
+
+.fa-stack-1x {
+	position: absolute;
+	font-size: .6em;
+}
+
+.fa-stack-2x {
+	position: relative;
+	font-size: 1em;
 }
 
 /* DATA BLOCKS */
@@ -617,6 +645,10 @@ table.single-bar-chart.fancy td:nth-child(2n-1) {
 		column-gap: 10px;
 		grid-template-columns: 2fr 1.25fr 2fr !important;
 	}
+
+	.infographic-container.smaller .infographic-icon {
+		font-size: 4rem !important;
+	}		
 }
 
 /* TIMELINE */
