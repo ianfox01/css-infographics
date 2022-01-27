@@ -3,10 +3,11 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Infographic Demo</title>
+	<title>HTML5 Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="HTML5 Template">
 	<meta name="author" content="Template">
-	<script src="https://kit.fontawesome.com/dd49cbd70c.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/152ae4b0b7.js" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 	<script src="conic-gradient.js"></script>
 	<link rel="stylesheet" href="css/styles.css?v=1.0">
@@ -16,8 +17,9 @@
 <body>
 <div class="body-container">
 	<h1>Infographic Test</h1>
-	<h2>Pie Charts</h2>
-	<div class="grid-container thirds">
+	<!-- PIE CHARTS -->
+	<h2>Simple Pie Charts</h2>
+	<div class="grid-container three">
 		<div class="infographic">
 			<p class="infographic-item-heading">Some Things</p>
 			<div class="infographic-item pie" style="--segment1: 41;">
@@ -37,71 +39,378 @@
 			</div>
 		</div>
 	</div>
+	<!-- PIE CHARTS WITH TEXT -->
+	<h2>Pie Charts with Callout Text</h2>
+	<div class="grid-container forty-sixty">
+		<div>
+			<div class="infographic-item pie" style="--segment1: 97;">
+				<p class="data-value">97.0%</p>
+			</div>
+		</div>
+		<div class="copy-chunk">
+			<p>of the graphs on this page consist of <strong>totally fake data.</strong></p>
+		</div>
+	</div>
+	<!-- COMPLEX PIE CHART -->
+	<h2>Complex Pie Charts</h2>
+	<div class="grid-container three">
+		<div class="infographic">
+			<p class="infographic-item-heading">Where Recent TU Grads Are Employed</p>
+			<div class="infographic-item pie donut" style="--segment1: 85;--segment2: 93;">
+			</div>
+		</div>
+		<div class="pie-key-container">
+			<div class="grid-container pie-key">
+				<p class="key-color-gold">85%</p>
+				<p>Maryland</p>
+				<p class="key-color-light">6%</p>
+				<p>Washington, D.C.</p>
+				<p class="key-color-dark">9%</p>
+				<p>Outside of the region</p>
+			</div>
+		</div>
+	</div>
+	<!-- DATA ICON -->
+	<h2>Icons with Data Overlay (Optional Callout Text)</h2>
+	<div class="grid-container forty-sixty card">
+		<div>
+			<div class="infographic-item">
+				<span aria-hidden="true" class="infographic-icon fas fa-graduation-cap"></span>
+				<p class="data-value">3.71</p>
+			</div>
+		</div>
+		<div class="copy-chunk">
+			<p>These icons are <strong>rendered from a web font.</strong></p>
+		</div>
+	</div>
+	<!-- ICON GRID -->
+	<h2>Icon Grid with Labels</h2>
+	<div class="grid-container three">
+		<div class="infographic reverse">
+			<p class="infographic-item-heading">Things</p>
+			<div class="infographic-item">
+				<span aria-hidden="true" class="infographic-icon fas fa-lightbulb"></span>
+				<p class="data-value">122</p>
+			</div>
+		</div>
+		<div class="infographic bottom-label reverse">
+			<p class="infographic-item-heading">Other Things</p>
+			<div class="infographic-item">
+				<span aria-hidden="true" class="infographic-icon fas fa-comments"></span>
+				<p class="data-value">12:1</p>
+			</div>
+		</div>
+		<div class="infographic bottom-label reverse">
+			<p class="infographic-item-heading">More Things</p>
+			<div class="infographic-item">
+				<span aria-hidden="true" class="infographic-icon fas fa-shield-alt"></span>
+				<p class="data-value">67%</p>
+			</div>
+		</div>
+	</div>
 
-
-<h2>Bar Chart</h2>
-	<table>
-		<thead>
-			<tr class="grid-container single-bar-chart">
-				<th>Institution</th>
-				<th>Headcount</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class="grid-container single-bar-chart">
-				<td>Coppin</td>
-				<td style="--this-value:2348; --scale: 40709;">2,348</td>
-			</tr>			
-			<tr class="grid-container single-bar-chart">
-				<td>UMCP</td>
-				<td style="--this-value:40709; --scale: 40709;">40,709</td>
-			</tr>
-			<tr class="grid-container single-bar-chart">
-				<td>UMBC</td>
-				<td style="--this-value:13497; --scale: 40709;">13,497</td>
-			</tr>
-			<tr class="grid-container single-bar-chart gold">
-				<td>TU</td>
-				<td style="--this-value:21917; --scale: 40709;">21,917</td>
-			</tr>
-		</tbody>
-	</table>
-
-  <h2>Double Bar Chart</h2>
-
-	<table>
-		<thead>
-			<tr class="grid-container double-bar-chart">
-				<th>Institution</th>
-				<th>Funding Per FTE</th>
-				<th>Headcount</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class="grid-container double-bar-chart">
-				<td>Coppin</td>
-				<td style="--this-value:22381; --scale:22381;">22,381</td>
-				<td style="--this-value:2348; --scale: 40709;">2,348</td>
-			</tr>			
-			<tr class="grid-container double-bar-chart">
-				<td>UMCP</td>
-				<td style="--this-value:16574; --scale: 22381;">16,574</td>
-				<td style="--this-value:40709; --scale: 40709;">40,709</td>
-			</tr>
-			<tr class="grid-container double-bar-chart">
-				<td>UMBC</td>
-				<td style="--this-value:13137; --scale: 22381;">13,137</td>
-				<td style="--this-value:13497; --scale: 40709;">13,497</td>
-			</tr>
-			<tr class="grid-container double-bar-chart gold">
-				<td>TU</td>
-				<td style="--this-value:6969; --scale: 22381;">6,969</td>
-				<td style="--this-value:21917; --scale: 40709;">21,917</td>
-			</tr>
-		</tbody>
-	</table>
-
-
+	<h2>Icon Grid with Labels - Showing Icon Only, No Data</h2>  <!--data can be removed by simply omitting the markup -->
+	<div class="grid-container infographic-container smaller four">
+		<div class="infographic bottom-label">
+			<div class="infographic-item">
+				<span class="infographic-icon fa-stack" style="vertical-align: top;">
+					<i class="fas fa-ban fa-stack-2x" style="opacity: 50%"></i>
+					<i class="fas fa-dollar-sign fa-stack-1x"></i>
+				</span>
+			</div>
+			<p class="infographic-item-heading">No membership or usage fees</p>
+		</div>
+		<div class="infographic bottom-label">
+			<div class="infographic-item">
+				<span aria-hidden="true" class="infographic-icon fas fa-wifi"></span>
+			</div>
+			<p class="infographic-item-heading">Lightning fast Wi-Fi</p>
+		</div>
+		<div class="infographic bottom-label reverse">
+			<div class="infographic-item">
+				<span aria-hidden="true" class="infographic-icon fas fa-lock-alt"></span>
+			</div>
+			<p class="infographic-item-heading">Lockers</p>
+		</div>
+			<div class="infographic bottom-label reverse">
+			<div class="infographic-item">
+				<span aria-hidden="true" class="infographic-icon fad fa-comments"></span>
+			</div>
+			<p class="infographic-item-heading">Conference Rooms</p>
+		</div>
+				<div class="infographic bottom-label">
+			<div class="infographic-item">
+				<span aria-hidden="true" class="infographic-icon fas fa-laptop"></span>
+			</div>
+			<p class="infographic-item-heading">Workstations</p>
+		</div>
+		<div class="infographic bottom-label">
+			<div class="infographic-item">
+				<span aria-hidden="true" class="infographic-icon fad fa-coffee-togo"></span>
+			</div>
+			<p class="infographic-item-heading">Starbucks onsite</p>
+		</div>
+		<div class="infographic bottom-label reverse">
+			<div class="infographic-item">
+				<span aria-hidden="true" class="infographic-icon fas fa-road"></span>
+			</div>
+			<p class="infographic-item-heading">Easy access to 695 & 83</p>
+		</div>
+			<div class="infographic bottom-label reverse">
+			<div class="infographic-item">
+				<span aria-hidden="true" class="infographic-icon fas fa-walking"></span>
+			</div>
+			<p class="infographic-item-heading">Walk to restaurants and retail</p>
+		</div>		
+	</div>
+	<!-- DATA BLOCKS -->
+	<h2>Data Grid with Labels</h2>
+	<div class="grid-container three">
+		<div class="data-block">
+			<div class="copy-chunk">
+				<p>Over 200 undergraduate students <strong>participated in research projects.</strong></p>
+			</div>
+		</div>
+		<div class="data-block">
+			<p class="infographic-item-heading">This is a small number</p>
+			<p class="data-value">7%</p>
+		</div>
+		<div class="data-block">
+			<p class="infographic-item-heading">This is a big number</p>
+			<p class="data-value">16,000</p>
+		</div>
+	</div>
+	<!--  Mini-Grid -->
+	<h2>Mini Grid</h2>
+	<div class="grid-container forty-sixty responsive-fit">
+		<div class="infographic">
+			<p class="infographic-item-heading">Some Important Facts & Figures</p>
+			<div class="infographic-item">
+				<span aria-hidden="true" class="infographic-icon fas fa-shield-alt"></span>
+				<p class="data-value">122</p>
+			</div>
+		</div>
+		<div class="grid-container two mini">
+			<div class="data-block">
+				<p class="infographic-item-heading">This is a small number</p>
+				<p class="data-value">7%</p>
+			</div>
+			<div class="data-block">
+				<p class="infographic-item-heading">Two-thirds is also known as</p>
+				<p class="data-value">66%</p>
+			</div>
+			<div class="data-block">
+				<p class="infographic-item-heading">We're in the top</p>
+				<p class="data-value">100</p>
+			</div>
+			<div class="data-block">
+				<p class="infographic-item-heading">5 plus 5 is not</p>
+				<p class="data-value">11</p>
+			</div>
+		</div>
+	</div>	
+	<!--  Mix and Match -->
+	<h2>Grid with Mix-In Utilities</h2>
+	<div class="grid-container three">
+		<div class="infographic reverse dark card">
+			<div class="infographic-item">
+				<span aria-hidden="true" class="infographic-icon fas fa-bolt"></span>
+				<p class="data-value">122</p>
+			</div>			
+			<p class="infographic-item-heading">Other Things</p>
+		</div>
+		<div class="data-block">
+			<p class="infographic-item-heading">This is a small number</p>
+			<p class="data-value">7%</p>
+		</div>
+		<div class="data-block gold">
+			<div class="copy-chunk">
+				<p>Over 200 undergraduate students <strong>participated in research projects.</strong></p>
+			</div>
+		</div>
+		<div class="data-block">
+			<p class="infographic-item-heading">We're in the top</p>
+			<p class="data-value">100</p>
+			<p class="infographic-item-subheading">This is some additional text to tell ya' about it.</p>
+		</div>
+		<div class="data-block reverse dark">
+			<p class="data-value">14</p>
+			<p class="infographic-item-heading">Is twice as much as 7</p>
+		</div>
+		<div class="data-block">
+			<p class="infographic-item-heading">This is a big number</p>
+			<p class="data-value">16,000</p>
+		</div>
+	</div>
+	<!-- Bar Charts -->
+	<!--NOTE: H2 moved inside the table caption for accessibility. -->
+	<table class="grid-container single-bar-chart fancy">
+		<caption><h2>Simple Bar Chart</h2></caption>	
+			<thead>
+				<tr>
+					<th scope="row">Institution</th>
+					<th scope="row">Headcount</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>UMBC</td>
+					<td style="--this-value:41; --scale: 100;">41%</td>
+				</tr>
+				<tr class="gold">
+					<td>TU</td>
+					<td style="--this-value:61; --scale: 100;">61%</td>
+				</tr>
+			</tbody>
+		</table>
+	<table class="grid-container single-bar-chart">
+		<caption><h2>Complex Bar Chart (Univariate)</h2></caption>	
+			<thead>
+				<tr>
+					<th scope="row">Institution</th>
+					<th scope="row">Headcount</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Coppin</td>
+					<td style="--this-value:2348; --scale: 40709;">2,348</td>
+				</tr>
+				<tr>
+					<td>UMCP</td>
+					<td style="--this-value:40709; --scale: 40709;">40,709</td>
+				</tr>
+				<tr>
+					<td>UMBC</td>
+					<td style="--this-value:13497; --scale: 40709;">13,497</td>
+				</tr>
+				<tr class="gold">
+					<td>TU</td>
+					<td style="--this-value:21917; --scale: 40709;">21,917</td>
+				</tr>
+			</tbody>
+		</table>
+	<table class="grid-container double-bar-chart">
+		<caption><h2>Complex Bar Chart (Bivariate)</h2></caption>	
+			<thead>
+				<tr>
+					<th scope="row">Institution</th>
+					<th scope="row">Funding Per FTE</th>
+					<th scope="row">Headcount</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Coppin</td>
+					<td style="--this-value:22381; --scale:22381;">22,381</td>
+					<td style="--this-value:2348; --scale: 40709;">2,348</td>
+				</tr>
+				<tr>
+					<td>UMCP</td>
+					<td style="--this-value:16574; --scale: 22381;">16,574</td>
+					<td style="--this-value:40709; --scale: 40709;">40,709</td>
+				</tr>
+				<tr>
+					<td>UMBC</td>
+					<td style="--this-value:13137; --scale: 22381;">13,137</td>
+					<td style="--this-value:13497; --scale: 40709;">13,497</td>
+				</tr>
+				<tr class="gold">
+					<td>TU</td>
+					<td style="--this-value:6969; --scale: 22381;">6,969</td>
+					<td style="--this-value:21917; --scale: 40709;">21,917</td>
+				</tr>
+			</tbody>
+		</table>
+	<!-- PROGRESS LIST -->
+	<h2>Simple Progress List</h2>
+	<div class="grid-container single simple-progress-list">
+		<div class="progress-list-item">
+			<p><strong>Goal 1</strong>
+				<br />
+				A very important milestone.
+			</p>
+			<div class="progress-icon-wrap">
+				<i aria-hidden="true" class="icon fas fa-check"></i>
+				<p>Complete</p>
+			</div>
+		</div>
+		<div class="progress-list-item">
+			<p><strong>Goal 2</strong>
+				<br />
+				Achieving amazing things.</p>
+			<div class="progress-icon-wrap">
+				<i aria-hidden="true" class="icon fas fa-check"></i>
+				<p>Complete</p>
+			</div>
+		</div>
+		<div class="progress-list-item">
+			<p><strong>Goal 3</strong>
+				<br />
+				This goal is the goaliest one of all.</p>
+			<div class="progress-icon-wrap">
+				<i aria-hidden="true" class="icon fas fa-redo-alt"></i>
+				<p>In Progress</p>
+			</div>
+		</div>
+	</div>
+	<!-- TIMELINE -->
+	<h2>Timeline</h2>
+	<div class="timeline-wrapper">
+		<div class="timeline">
+			<div class="timeline-item">
+				<div class="date">Fall 2019</div>
+				<i aria-hidden="true" class="icon fas fa-search"></i>
+				<div class="content">
+					<h3>Phase 1: Discovery</h3>
+					<p>
+						Develop fact base on where we are; gather initial input on aspirations from senior leadership; conduct an environmental scan and SWOT analysis.
+					</p>
+				</div>
+			</div>
+			<div class="timeline-item">
+				<div class="date">Spring – Fall 2020</div>
+				<i aria-hidden="true" class="icon fas fa-users"></i>
+				<div class="content">
+					<h3>Phase 2: Input Sessions & Development</h3>
+					<p>
+						Conduct listening and input sessions with internal stakeholders; develop and share draft plan for feedback through shared governance.
+					</p>
+				</div>
+			</div>
+			<div class="timeline-item">
+				<div class="date">Summer 2020 – Spring 2021</div>
+				<i aria-hidden="true" class="icon fas fa-clipboard-check"></i>
+				<div class="content">
+					<h3>Phase 3: Test & Finalize</h3>
+					<p>
+						Develop final strategy in detail; recommend next steps for implementation.
+					</p>
+				</div>
+			</div>
+			<div class="timeline-item">
+				<div class="date">Spring 2021</div>
+				<i aria-hidden="true" class="icon fas fa-rocket"></i>
+				<div class="content">
+					<h3>Phase 4: Implement & Launch</h3>
+					<p>
+						Share the final plan internally and externally; put the plan to action.
+					</p>
+				</div>
+			</div>
+			<div class="timeline-item">
+				<div class="date">Spring – Summer 2021</div>
+				<i aria-hidden="true" class="icon fas fa-cogs"></i>
+				<div class="content">
+					<h3>Phase 5: Alignment</h3>
+					<p>
+						Colleges, divisions, and units revise or develop strategic plans in alignment with TU Strategic Plan.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 </body>
+
 </html>
