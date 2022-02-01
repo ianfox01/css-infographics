@@ -343,7 +343,7 @@ p.key-color-dark {
 	font-size: 5rem;	
 }
 
-/* Font Awesome Stacked Icon Overrides -- modified the default placement of FA icon stacks so they work in our layout*/
+/* Font Awesome Stacked Icon Overrides -- modifies the default placement of FA icon stacks so they work in our layout*/
 
 .fa-stack {
 	height: 1em;
@@ -358,6 +358,12 @@ p.key-color-dark {
 .fa-stack-2x {
 	position: relative;
 	font-size: 1em;
+	opacity: .4;
+}
+
+.fa-stack-offset {		/* Allows a stacked icon with top-right offset effect*/
+	left: 30px;
+    top: -20px;
 }
 
 /* DATA BLOCKS */
@@ -565,7 +571,7 @@ table,
 
 /* Reverse */
 
-.reverse p.data-value:first-child {		/* Uset this class when a the label needs to display below the value. Row-reverse CSS property is not accessible. */
+.bottom-label p.data-value:first-child {		/* Use this class when a the label needs to display below the value. Row-reverse CSS property is not accessible. */
     margin-top: 30px;
 }
 
@@ -648,7 +654,12 @@ table.single-bar-chart.fancy td:nth-child(2n-1) {
 
 	.infographic-container.smaller .infographic-icon {
 		font-size: 4rem !important;
-	}		
+	}
+
+	.infographic-container p.infographic-item-heading {
+		font-size: 1rem;
+		font-weight: 500;
+	}
 }
 
 /* TIMELINE */
