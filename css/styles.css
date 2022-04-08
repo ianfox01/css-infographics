@@ -31,6 +31,10 @@
 	margin-bottom: 30px;
 }
 
+.body-container p {
+	line-height: unset;
+}
+
 /* TEMPLATE GRIDS - Global layout classes. */
 
 .grid-container {
@@ -526,9 +530,11 @@ table,
 
 /* UTILITIES */
 
-hr.gold {
+hr.infographic-separator {
     margin: 40px 20px 0;
-    border: 1px solid #fb0;
+    background: #fb0;
+    width: 100%;
+    height: 2px;
 }
 
 .card {
@@ -560,6 +566,26 @@ hr.gold {
 
 .gold {
 	background: #FB0;
+}
+
+.gold-tigertooth {
+	background-image: linear-gradient(#FB0,#ffc832);
+	position: relative;
+}
+
+.gold-tigertooth:before {
+    background-image: url(/_resources/images/reskin/gray-tiger-tooth-pattern-sidebar.png);
+	position: relative;
+    opacity: .2;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-position-y: 20%;
+    background-size: 70%; 	
 }
 
 .data-block.dark {
@@ -595,6 +621,10 @@ margin: 0 auto;
 	padding: 20px;
 }
 
+@media screen and (max-width: 499px) { 
+.column-span {
+    flex-direction: column;
+}
 /* Striped Backgrounds*/
 
 .stripe.gold {
