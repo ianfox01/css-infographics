@@ -246,7 +246,13 @@ p.infographic-item-subheading {
 .donut {
 	height: 100%;
 	width: 100%;
-	background-image: conic-gradient(#fb0 calc(3.6deg * var(--segment1, 100)), #DDD 0 calc(3.6deg * var(--segment2, 100)), #3C3C3C 0 calc(3.6deg * var(--segment3, 100)), #fb0 0 calc(3.6deg * var(--segment4, 100)), #fb0 0);
+	background-image: conic-gradient(
+		#fb0 calc(3.6deg * var(--segment1, 100)),
+		#ddd 0 calc(3.6deg * var(--segment2, 100)),
+		#3c3c3c 0 calc(3.6deg * var(--segment3, 100)),
+		#ffd16f 0 calc(3.6deg * var(--segment4, 100)),
+		#ffc647 0 calc(3.6deg * var(--segment5, 100)),
+		#fb0 0);
 }
 
 .donut:after {
@@ -275,21 +281,31 @@ p.infographic-item-subheading {
 	margin: 5px;
 }
 
-p.key-color-gold {
+p.key-color-segment1 {
 	background-color: #FB0;
 	text-align: center;
 	font-weight: 600;
 }
 
-p.key-color-light {
-	background-color: #3c3c3c;
-	color: #EEE;
+p.key-color-segment2 {
+	background-color: #ddd;
 	text-align: center;
 	font-weight: 600;
 }
 
-p.key-color-dark {
-	background-color: #DDD;
+p.key-color-segment3 {
+	background-color: #3c3c3c;
+	color: #eee;		
+	text-align: center;
+	font-weight: 600;
+}
+p.key-color-segment4 {
+	background-color: #ffd16f;
+	text-align: center;
+	font-weight: 600;
+}
+p.key-color-segment5 {
+	background-color: #ffc647;
 	text-align: center;
 	font-weight: 600;
 }
@@ -510,6 +526,11 @@ table,
 
 /* UTILITIES */
 
+hr.gold {
+    margin: 40px 20px 0;
+    border: 1px solid #fb0;
+}
+
 .card {
 	border: solid 1px #333;
 	padding: 20px;
@@ -520,7 +541,12 @@ table,
 /* Dark & Gold Variants */
 
 .pie.dark {
-	background-image: conic-gradient(#151500 calc(3.6deg * var(--segment1, 100)), #3C3C3C 0 calc(3.6deg * var(--segment2, 100)), #3C3C3C 0 calc(3.6deg * var(--segment3, 100)), #3C3C3C 0 calc(3.6deg * var(--segment4, 100)), #3C3C3C 0);
+	background-image: conic-gradient(
+		#151500 calc(3.6deg * var(--segment1, 100)),
+		#3C3C3C 0 calc(3.6deg * var(--segment2, 100)),
+		#3C3C3C 0 calc(3.6deg * var(--segment3, 100)),
+		#3C3C3C 0 calc(3.6deg * var(--segment4, 100)),
+		#3C3C3C 0);
 	background-color: #3C3C3C;
 }
 
@@ -532,7 +558,7 @@ table,
 	color: #FB0;
 }
 
-.data-block.gold {
+.gold {
 	background: #FB0;
 }
 
@@ -555,6 +581,18 @@ table,
 
 .timeline .timeline-item.dark .content {
 	background: #3C3C3C;
+}
+
+/* Grid Span */
+
+.column-span {
+grid-column: 1 / span 2;
+flex-direction: row;
+margin: 0 auto;
+}
+
+.column-span > p {
+	padding: 20px;
 }
 
 /* Striped Backgrounds*/
@@ -879,3 +917,4 @@ table.single-bar-chart.fancy td:nth-child(2n-1) {
 	clip: rect(0, 0, 0, 0);
 	border: 0;
 }
+
