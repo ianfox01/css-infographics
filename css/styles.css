@@ -39,6 +39,13 @@
 	padding: unset;
 }
 
+ul, li {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 300;
+    list-style-type: square;
+}
+
 /* TEMPLATE GRIDS - Global layout classes. */
 
 .grid-container {
@@ -47,7 +54,7 @@
 	margin: 0 20px;
 }
 
-.grid-container.single {
+.grid-container.one {
 	grid-template-columns: 1fr;
 }
 
@@ -73,6 +80,10 @@
 
 .grid-container.forty-sixty {
 	grid-template-columns: 2fr 3fr;
+}
+
+.grid-container.sixty-forty {
+	grid-template-columns: 3fr 2fr;
 }
 
 .grid-container>.grid-container {
@@ -134,7 +145,8 @@ table.grid-container.double-bar-chart tbody tr {
 	.grid-container.three,
 	.grid-container.four,
 	.grid-container.five,	
-	.grid-container.forty-sixty {
+	.grid-container.forty-sixty,
+	.grid-container.sixty-forty  {
 		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 	}
 
@@ -148,7 +160,8 @@ table.grid-container.double-bar-chart tbody tr {
 
 	.grid-container.two,
 	.grid-container.three,
-	.grid-container.forty-sixty {
+	.grid-container.forty-sixty,
+	.grid-container.sixty-forty {
 		grid-template-columns: 1fr;
 	}
 
@@ -225,6 +238,41 @@ p.infographic-item-subheading {
 	font-weight: 300;
 	text-transform: uppercase;
 	align-self: center;
+}
+
+/* Multi-Column Bulleted Lists */
+
+.two-column-list {
+	columns: 2;
+    padding-right: 15px;
+    margin-bottom: 15px;	
+}
+
+.three-column-list {
+	columns: 3;
+    padding-right: 15px;
+    margin-bottom: 15px;	
+}
+
+.two-column-list li, .three-column-list li {
+    padding-right: 15px;
+    margin-bottom: 15px;	
+}
+
+.data-block ul li::marker {
+    color: #FB0;
+}
+
+@media screen and (max-width: 980px) {
+.three-column-list {
+	columns: 2;
+	}
+}	
+
+@media screen and (max-width: 500px) {
+.two-column-list, .three-column-list {
+	columns: 1;
+	}
 }
 
 /* Mini-Grid */
@@ -535,9 +583,9 @@ table,
 /* UTILITIES */
 
 hr.infographic-separator {
-    margin: 40px 20px 0;
-    background: #fb0;
-    width: 100%;
+    margin: 60px auto 0;
+    border-top: 2px solid #fb0;
+    width: calc(100% - 40px);
     height: 2px;
 }
 
@@ -611,6 +659,21 @@ hr.infographic-separator {
 
 .timeline .timeline-item.dark .content {
 	background: #3C3C3C;
+}
+
+/* header and border */
+
+	/* USAGE:  Apply to a heading immediately before a grid container. The grid container will also receive a border */
+
+h3.heading-banner {
+	background: #EEE;
+	padding: 10px;
+	margin: 30px 20px 0;
+	text-align: center;
+}
+
+h3.heading-banner + .grid-container {
+	border: 2px solid #EEE;
 }
 
 /* Grid Span */
