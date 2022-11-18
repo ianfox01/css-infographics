@@ -13,7 +13,7 @@ Class|Fuction|Required
 `.quarters`| Sets grid to 25% / 25% / 25% / 25%|No
 `.fifths`| Sets grid to 20% / 20% / 20% / 20% / 20%|No
 `.forty-sixty`| Sets grid to 40% / 60%|No
-
+`.sixty-forty`| Sets grid to 60% / 40%|No
 
 ## Content
 - Pie charts use the class `.pie` and apply a single-stop conic gradient to the same value as the chart's content. Use to illustrate single data point.
