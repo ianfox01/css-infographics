@@ -300,15 +300,17 @@ p.infographic-item-subheading {
 /* DONUT - COMPLEX PIE */
 
 .donut {
-	height: 100%;
 	width: 100%;
 	background-image: conic-gradient(
-		#fb0 calc(3.6deg * var(--segment1, 100)),
+		#fb0 0 calc(3.6deg * var(--segment1, 100)),
 		#ddd 0 calc(3.6deg * var(--segment2, 100)),
 		#3c3c3c 0 calc(3.6deg * var(--segment3, 100)),
-		#ffd16f 0 calc(3.6deg * var(--segment4, 100)),
-		#ffc647 0 calc(3.6deg * var(--segment5, 100)),
+		#fc6 0 calc(3.6deg * var(--segment4, 100)),
+		#666 0 calc(3.6deg * var(--segment5, 100)),
+		#999 0 calc(3.6deg * var(--segment6, 100)),
+		#ffffcc 0 calc(3.6deg * var(--segment7, 100)),
 		#fb0 0);
+	border: 1px solid #fff; /* a hack to prevent 1px lines that bisect pie charts in chome */
 }
 
 .donut:after {
@@ -338,7 +340,7 @@ p.infographic-item-subheading {
 }
 
 p.key-color-segment1 {
-	background-color: #FB0;
+	background-color: #fb0;
 	text-align: center;
 	font-weight: 600;
 }
@@ -351,17 +353,33 @@ p.key-color-segment2 {
 
 p.key-color-segment3 {
 	background-color: #3c3c3c;
-	color: #eee;		
+	color: #fff;		
 	text-align: center;
 	font-weight: 600;
 }
+
 p.key-color-segment4 {
-	background-color: #ffd16f;
+	background-color: #fc6;
 	text-align: center;
 	font-weight: 600;
 }
+
 p.key-color-segment5 {
-	background-color: #ffc647;
+	background-color: #666;
+	color: #fff;	
+	text-align: center;
+	font-weight: 600;
+}
+
+p.key-color-segment6 {
+	background-color: #999;
+	color: #fff;	
+	text-align: center;
+	font-weight: 600;
+}
+
+p.key-color-segment7 {
+	background-color: #ffffcc;
 	text-align: center;
 	font-weight: 600;
 }
@@ -1016,4 +1034,3 @@ table.single-bar-chart.fancy td:nth-child(2n-1) {
 	clip: rect(0, 0, 0, 0);
 	border: 0;
 }
-
