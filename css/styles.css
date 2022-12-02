@@ -203,8 +203,6 @@ p.data-value {
 	border-radius: 50%;
 	background-image: conic-gradient(#fb0 calc(3.6deg * var(--segment1, 100)),
 		#fc3 0 calc(3.6deg * var(--segment2, 100)),
-		#fb0 0 calc(3.6deg * var(--segment3, 100)),
-		#fb0 0 calc(3.6deg * var(--segment4, 100)),
 		#fb0 0);
 	background-origin: border-box;
 	box-shadow: 0 0.075em 0.2em 0.0em rgba(0, 0, 0, .25);
@@ -244,23 +242,25 @@ p.infographic-item-subheading {
 
 .two-column-list {
 	columns: 2;
-    padding-right: 15px;
-    margin-bottom: 15px;	
+	padding-right: 15px;
+	margin-bottom: 15px;	
 }
 
 .three-column-list {
 	columns: 3;
-    padding-right: 15px;
-    margin-bottom: 15px;	
+	padding-right: 15px;
+	margin-bottom: 15px;	
 }
 
 .two-column-list li, .three-column-list li {
-    padding-right: 15px;
-    margin-bottom: 15px;	
+	padding-right: 15px;
+	margin-bottom: 15px;	
+	margin-right: 10px;
 }
 
+
 .data-block ul li::marker {
-    color: #FB0;
+	color: #FB0;
 }
 
 @media screen and (max-width: 980px) {
@@ -310,7 +310,7 @@ p.infographic-item-subheading {
 		#999 0 calc(3.6deg * var(--segment6, 100)),
 		#ffffcc 0 calc(3.6deg * var(--segment7, 100)),
 		#fb0 0);
-	border: 1px solid #fff; /* a hack to prevent 1px lines that bisect pie charts in chome */
+	border: 1px solid #fff; /* a hack to prevent 1px lines that bisect pie charts in chrome -- only helps a little */
 }
 
 .donut:after {
@@ -429,6 +429,10 @@ p.key-color-segment7 {
 	font-size: 12rem;
 }
 
+.infographic-icon:before {
+    vertical-align: middle;
+}
+
 .infographic-container.smaller .infographic-icon { /* use with 4-up or 5-up  size */
 	font-size: 5rem;	
 }
@@ -461,6 +465,7 @@ p.key-color-segment7 {
 .data-block {
 	display: flex;
 	flex-direction: column;
+    justify-content: space-around;	
 	padding: 20px 10px;
 }
 
@@ -469,12 +474,18 @@ p.key-color-segment7 {
 }
 
 .data-block p.data-value {
-	font-size: 6rem;
+	font-size: 4rem;
+	font-weight: 600;
+	line-height: normal;		
 }
 
 .data-block .copy-chunk p {
 	padding-left: 15px;
 	padding-right: 10px;
+}
+
+.data-block h3 {
+	margin-top: 10px;
 }
 
 /* BAR CHART STYLES */
@@ -601,37 +612,51 @@ table,
 /* UTILITIES */
 
 hr.infographic-separator {
-    margin: 60px auto 0;
+    margin: 40px 20px 0;
+    padding: unset;
     border-top: 2px solid #fb0;
     width: calc(100% - 40px);
     height: 2px;
 }
 
 .card {
-	border: solid 1px #333;
 	padding: 20px;
 	background: #f7f7f7;
 	box-shadow: 10px 10px 20px 0 rgb(0 0 0 / 20%);
 }
 
-/* Dark & Gold Variants */
+.bordered {
+	border: solid 1px #333;
+}
+
+.flex-vertical {
+	flex-direction: column;
+}
+
+/* Dark and Gold Variants */
 
 .pie.dark {
 	background-image: conic-gradient(
 		#151500 calc(3.6deg * var(--segment1, 100)),
 		#3C3C3C 0 calc(3.6deg * var(--segment2, 100)),
-		#3C3C3C 0 calc(3.6deg * var(--segment3, 100)),
-		#3C3C3C 0 calc(3.6deg * var(--segment4, 100)),
 		#3C3C3C 0);
 	background-color: #3C3C3C;
 }
 
-.infographic-container.dark .infographic-icon, .infographic-item.dark>.infographic-icon {
-	color: #3C3C3C;
+.dark .data-block,.dark .copy-chunk, .dark .infographic-item-heading, .infographic-item.dark>.infographic-icon {
+	color: #fff;
 }
 
-.infographic-container.dark .data-value, .infographic-item.dark>.data-value {
+.dark .infographic-icon {
+	color: #777;
+}
+
+.dark .data-value, .infographic-item.dark>.data-value {
 	color: #FB0;
+}
+
+.dark {
+	background: #3c3c3c;
 }
 
 .gold {
@@ -644,7 +669,7 @@ hr.infographic-separator {
 }
 
 .gold-tigertooth:before {
-    background-image: url(/_resources/images/reskin/gray-tiger-tooth-pattern-sidebar.png);
+    background-image: url(/_resources/images/reskin/white-tiger-tooth-pattern.png);
 	position: relative;
     opacity: .2;
     content: '';
