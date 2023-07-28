@@ -176,7 +176,8 @@ table.grid-container.double-bar-chart tbody tr {
 .infographic {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;	
+	justify-content: start;
+	align-self: stretch;
 }
 
 p.data-value {
@@ -192,7 +193,6 @@ p.data-value {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	height: 100%;
 	width: 100%;
 	margin: 0;
 }
@@ -220,7 +220,6 @@ p.infographic-item-heading {
 	display: flex;
 	font-weight: 600;
 	text-transform: uppercase;
-	margin-bottom: 0;
 	text-align: center;
 	font-size: 1.25rem;
 	margin: 30px 0;
@@ -254,10 +253,9 @@ p.infographic-item-subheading {
 
 .two-column-list li, .three-column-list li {
 	padding-right: 15px;
-	margin-bottom: 15px;	
+	margin-bottom: 15px;
 	margin-right: 10px;
 }
-
 
 .data-block ul li::marker {
 	color: #FB0;
@@ -422,6 +420,15 @@ p.key-color-segment7 {
 
 .infographic-container {
 	align-items: baseline;
+}
+
+.infographic-container a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+.infographic-container a:hover {
+	border: 1px solid;
 }
 
 .infographic-icon {
@@ -620,6 +627,12 @@ hr.infographic-separator {
 }
 
 .card {
+	padding: 20px;
+	background: #f7f7f7;
+	box-shadow: 10px 10px 20px 0 rgb(0 0 0 / 20%);
+}
+
+.cards > div {
 	padding: 20px;
 	background: #f7f7f7;
 	box-shadow: 10px 10px 20px 0 rgb(0 0 0 / 20%);
