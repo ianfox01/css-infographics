@@ -425,10 +425,13 @@ p.key-color-segment7 {
 .infographic-container a {
 	color: inherit;
 	text-decoration: inherit;
+	transition: all .2s ease-in-out;
 }
 
 .infographic-container a:hover {
-	border: 1px solid;
+	outline: solid 1px #FB0;
+	outline-offset: 10px;
+	transform: scale(1.04);	
 }
 
 .infographic-icon {
@@ -1072,3 +1075,4 @@ table.single-bar-chart.fancy td:nth-child(2n-1) {
 	clip: rect(0, 0, 0, 0);
 	border: 0;
 }
+
