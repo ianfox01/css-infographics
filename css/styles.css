@@ -50,7 +50,7 @@ ul, li {
 
 .grid-container {
 	display: grid;
-	grid-gap: 30px;
+	grid-gap: 20px;
 	margin: 0 20px;
 }
 
@@ -178,6 +178,7 @@ table.grid-container.double-bar-chart tbody tr {
 	flex-direction: column;
 	justify-content: start;
 	align-self: stretch;
+	padding: 5px;
 }
 
 p.data-value {
@@ -194,7 +195,7 @@ p.data-value {
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	margin: 0;
+	margin: 20px 0;
 }
 
 .pie {
@@ -222,7 +223,7 @@ p.infographic-item-heading {
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 1.25rem;
-	margin: 30px 0;
+	margin: 20px 0;
 }
 
 p.infographic-item-subheading {
@@ -765,11 +766,12 @@ h3.heading-banner + .grid-container {
 	background-size: 42.43px 42.43px;
 }
 
-/* Reverse */
+/* Reverse 
 
-.bottom-label p.data-value:first-child {		/* Use this class when a the label needs to display below the value. Row-reverse CSS property is not accessible. */
+.bottom-label p.data-value:first-child {
     margin-top: 30px;
 }
+*/
 
 /* Size */
 
@@ -1075,4 +1077,3 @@ table.single-bar-chart.fancy td:nth-child(2n-1) {
 	clip: rect(0, 0, 0, 0);
 	border: 0;
 }
-
