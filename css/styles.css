@@ -46,12 +46,6 @@ ul, li {
     list-style-type: square;
 }
 
-/* OVERRIDES -- For TU templates */
-
-.pie p {
-	color: #000;
-}
-
 /* TEMPLATE GRIDS - Global layout classes. */
 
 .grid-container {
@@ -342,6 +336,7 @@ p.infographic-item-subheading {
 .pie-key p {
 	padding: 10px;
 	margin: 5px;
+	color: #000; /* this value is inherited from higher level style sheet, but also declaring it here to avoid false positives n accessibility reports */
 }
 
 p.key-color-segment1 {
