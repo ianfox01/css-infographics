@@ -336,49 +336,53 @@ p.infographic-item-subheading {
 .pie-key p {
 	padding: 10px;
 	margin: 5px;
-	color: #000; /* this value is inherited from higher level style sheet, but also declaring it here to avoid false positives n accessibility reports */
 }
 
 p.key-color-segment1 {
 	background-color: #fb0;
+	color: #000;
 	text-align: center;
 	font-weight: 600;
 }
 
 p.key-color-segment2 {
 	background-color: #ddd;
+	color: #000;
 	text-align: center;
 	font-weight: 600;
 }
 
 p.key-color-segment3 {
 	background-color: #3c3c3c;
-	color: #fff;		
+	color: #fff;
 	text-align: center;
 	font-weight: 600;
 }
 
 p.key-color-segment4 {
 	background-color: #fc6;
+	color: #000;
 	text-align: center;
 	font-weight: 600;
 }
 
 p.key-color-segment5 {
 	background-color: #666;
-	color: #fff;	
+	color: #fff;
 	text-align: center;
 	font-weight: 600;
 }
 
 p.key-color-segment6 {
-	background-color: #999;	
+	background-color: #999;
+	color: #000;
 	text-align: center;
 	font-weight: 600;
 }
 
 p.key-color-segment7 {
-	background-color: #ffffcc;
+	background-color: #ffc;
+	color: #000;
 	text-align: center;
 	font-weight: 600;
 }
